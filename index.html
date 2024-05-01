@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <title>Quiz app</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row ">
+            <div class="col text-center">
+                <H1>Quiz Student Form </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col">
+                <form id="studentForm" onsubmit="submitForm(); return false;">
+                    <div class="mb-3">
+                        <label for="rollno" class="form-label">Roll no</label>
+                        <input type="text" class="form-control" id="InputRollno">
+
+                        <label for="rollno" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="InputName">
+
+                        <label for="select">Batch</label>
+                        <select class="form-select" aria-label="Default select example" id="batch">
+                            <option selected>Select your batch</option>
+                            <option value="1">Batch 1</option>
+                            <option value="2">Batch 2</option>
+                            <option value="3">Batch 3</option>
+                        </select>
+
+                        <label for="select">Section</label>
+                        <select class="form-select" aria-label="Default select example" id="section">
+                            <option selected>Select your batch</option>
+                            <option value="1">Section A</option>
+                            <option value="2">Section B</option>
+                            <option value="3">Section C</option>
+                        </select>
+
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="studentForm">Submit</button>
+                </form>
+                <div id="div"></div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <form id="quizForm">
+                    <div class="form-group item">
+                        <label for="question1">What is the capital of France?</label><br>
+                        <input type="radio" id="question1_option1" name="question1" value="option1">
+                        <label for="question1_option1">London</label><br>
+                        <input type="radio" id="question1_option2" name="question1" value="option2">
+                        <label for="question1_option2">Berlin</label><br>
+                        <input type="radio" id="question1_option3" name="question1" value="option3">
+                        <label for="question1_option3">Paris</label><br>
+                        <input type="radio" id="question1_option4" name="question1" value="option4">
+                        <label for="question1_option4">Madrid</label>
+                    </div>
+
+
+                    <!-- Add more questions here -->
+
+                    <div class="form-group item">
+                        <label for="question2">What is the chemical symbol for water?</label><br>
+                        <input type="radio" id="question2_option1" name="question2" value="option1">
+                        <label for="question2_option1">H<sub>2</sub>O</label><br>
+                        <input type="radio" id="question2_option2" name="question2" value="option2">
+                        <label for="question2_option2">CO<sub>2</sub></label><br>
+                        <input type="radio" id="question2_option3" name="question2" value="option3">
+                        <label for="question2_option3">HCl</label><br>
+                        <input type="radio" id="question2_option4" name="question2" value="option4">
+                        <label for="question2_option4">NaCl</label>
+                    </div>
+
+                    <div class="form-group item">
+                        <label for="question3">Who wrote "Romeo and Juliet"?</label><br>
+                        <input type="radio" id=" question3_option1" name="question3" value=" Charles Dickens">
+                        <label for=" Charles Dickens"> William Shakespeare</label><br>
+                        <input type="radio" id=" question3_option2" name="question3" value=" Charles Dickens">
+                        <label for=" Charles Dickens"> Charles Dickens</label><br>
+                        <input type="radio" id=" question3_option3" name="question3" value=" Jane Austen">
+                        <label for=" Jane Austen"> Jane Austen</label><br>
+                        <input type="radio" id="question3_option4" name="question3" value="Mark Twain">
+                        <label for="Mark Twain">Mark Twain</label><br>
+
+                    </div>
+
+                    <div class="form-group item">
+                        <label for="question4">What is the largest planet in our solar system?</label><br>
+                        <input type="radio" id="question4_option1" name="question4" value="Earth">
+                        <label for="Earth">Earth</label><br>
+                        <input type="radio" id="question4_option2" name="question4" value="Mars">
+                        <label for="Mars">Mars</label><br>
+                        <input type="radio" id="question4_option3" name="question4" value="Jupiter">
+                        <label for="Jupiter">Jupiter</label><br>
+                        <input type="radio" id="question4_option4" name="question4" value="Saturn">
+                        <label for="Saturn">Saturn</label><br>
+
+                    </div>
+
+                    <div class="form-group item">
+                        <label for="question5">What is the capital of Japan?</label><br>
+                        <input type="radio" id="question5_option1" name="question5" value="Beijing">
+                        <label for="Beijing">Beijing</label><br>
+                        <input type="radio" id="question5_option1" name="question5" value="Seoul">
+                        <label for="Seoul">Seoul</label><br>
+                        <input type="radio" id="question5_option1" name="question5" value="Tokyo">
+                        <label for="Tokyo">Tokyo</label><br>
+                        <input type="radio" id="question5_option1" name="question5" value="Bangkok">
+                        <label for="Bangkok">Bangkok</label><br>
+
+                    </div>
+
+
+
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+
+                </form>
+                <div id="result" class="mt-4" style="display: none;">
+                    <h3>Result:</h3>
+                    <p id="quizResult"></p>
+                  </div>
+
+            </div>
+
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+
+
+
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var formData = document.getElementById("studentForm");
+        document.getElementById("studentForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Get form values
+            const rollno = document.getElementById("InputRollno").value;
+            const name = document.getElementById("InputName").value;
+            const batch = document.getElementById("batch").value;
+            const section = document.getElementById("section").value;
+
+            // Display values in a div
+            let card = document.createElement("div");
+            let myRollno = document.createElement("p")
+            myRollno.textContent = "My rollno:" + rollno;
+            let myName = document.createElement("p")
+            myName.textContent = "MY name:" + name;
+            let myBatch = document.createElement("p")
+            myBatch.textContent = "My batch:" + batch;
+            let mySection = document.createElement("p")
+            mySection.textContent = "My section: " + section;
+
+            card.append(myRollno)
+            card.appendChild(document.createElement("br"))
+            card.append(myName)
+            card.appendChild(document.createElement("br"))
+            card.append(myBatch)
+            card.appendChild(document.createElement("br"))
+            card.append(mySection)
+            card.appendChild(document.createElement("br"))
+
+            formData.style.display = "none"
+            document.getElementById('div').appendChild(card);
+
+
+
+        });
+        document.getElementById("quizForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Get form values
+    const answer1 = document.querySelector('input[name="question1"]:checked').value;
+    const answer2 = document.querySelector('input[name="question2"]:checked').value;
+    const answer3 = document.querySelector('input[name="question3"]:checked').value;
+    const answer4 = document.querySelector('input[name="question4"]:checked').value;
+    const answer5 = document.querySelector('input[name="question5"]:checked').value;
+
+    // Calculate score
+    let score = 0;
+    if (answer1 === "option3") {
+      score++;
+    }
+    if (answer2 === "option1") {
+      score++;
+    }
+    if (answer3 === "option1") {
+      score++;
+    }
+    if (answer4 === "option4") {
+      score++;
+    }
+    if (answer5 === "option3") {
+      score++;
+    }
+
+    // Display result
+    const resultDiv = document.getElementById("result");
+    const quizResult = document.getElementById("quizResult");
+    quizResult.textContent = `You scored ${score} out of 2.`;
+
+    // Hide the form and display the result
+    document.getElementById("quizForm").style.display = "none";
+    resultDiv.style.display = "block";
+  });
+
+
+    </script>
+</body>
+
+</html>
